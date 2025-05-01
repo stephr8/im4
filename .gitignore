@@ -1,0 +1,4 @@
+.DS_Store
+system/config.php
+.vscode
+.env
