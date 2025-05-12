@@ -7,10 +7,36 @@ body {
 }
 
 h1 {
+  color: var(--primary_text_dark, #0C2659);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin-bottom: 1em;
 }
 
-form > div {
+h2 {
+  color: var(--primary_text_dark, #0C2659);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1em;
+}
+
+h3 {
+  color: var(--primary_hg_dark, #081A3D);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+form>div {
   margin-bottom: 1em;
 }
 
@@ -31,5 +57,11 @@ button {
 }
 
 p {
+  color: var(--primary_text_dark, #0C2659);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin-top: 1em;
 }
