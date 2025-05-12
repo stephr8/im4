@@ -18,13 +18,12 @@ class MainButton extends HTMLElement {
             display: flex; /* Makes width/height apply and centers text */
             justify-content: center;
             align-items: center;
-  
             width: 70vw;
             height: 7vh;
             flex-shrink: 0;
             border-radius: 10px;
             background: #081A3D;
-            font-size: 60px;
+            font-size: 50px;
             color: #E6EFFF;
             font-family: "Inter", sans-serif;
             text-decoration: none;

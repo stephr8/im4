@@ -32,7 +32,7 @@ h3 {
   color: var(--primary_hg_dark, #081A3D);
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 3.1rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -56,10 +56,26 @@ line-height: normal;
 
 input[type="email"],
 input[type="password"] {
-  width: 200px;
-  height: 48px;
-  padding: 4px;
+  width: 50vw;
+  height: 5vh;
+  border: 1px solid var(--primary_hg_dark, #081A3D);
+  border-radius: 8px;
+  border-color: #081A3D;
+  /*  width: 200px;
+  height: 48px; */
+  padding: 10px;
+  margin: 10px;
 }
+
+input::placeholder {
+    color: var(--primary_text_dark, #0C2659);
+    font-size: 2.5rem;
+    font-style: italic;
+    font-family: Inter, sans-serif;  
+    padding-left: 20px;
+
+    transform: translateY(8px);
+  }
 
 button {
   padding: 8px 16px;
