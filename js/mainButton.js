@@ -6,6 +6,7 @@ class MainButton extends HTMLElement {
   
     connectedCallback() {
       const href = this.getAttribute('href');
+      const type = this.getAttribute('type') || 'button';
       const tag = href ? 'a' : 'button';
   
       this.shadowRoot.innerHTML = `
@@ -39,8 +40,16 @@ class MainButton extends HTMLElement {
           }
         </style>
         <${tag} ${href ? `href="${href}"` : ''}><slot></slot></${tag}>
-      `;
+        `;
+        if (!href && type === 'submit') {
+      this.shadowRoot.querySelector('button').addEventListener('click', () => {
+        // Find nearest form and submit it
+        const form = this.closest('form');
+        if (form) form.requestSubmit(); // Modern and reliable way
+      });
     }
   }
+}
   
   customElements.define('main-button', MainButton);
+

@@ -1,4 +1,4 @@
-class mainInput extends HTMLElement {
+class MainInput extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -27,12 +27,19 @@ class mainInput extends HTMLElement {
           font-style: italic;
           font-size: 2.5rem;
           padding-left: 20px;
-          display: block;
         }
       </style>
       <input type="${type}" placeholder="${placeholder}">
     `;
+
+    if (type === 'submit') {
+      const input = this.shadowRoot.querySelector('input');
+      input.addEventListener('click', () => {
+        const form = this.closest('form');
+        if (form) form.requestSubmit();
+      });
+    }
   }
 }
 
-customElements.define('main-input', mainInput);
+customElements.define('main-input', MainInput);
