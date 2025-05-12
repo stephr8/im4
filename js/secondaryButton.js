@@ -24,7 +24,7 @@ class SecondaryButton extends HTMLElement {
             flex-shrink: 0;
             border-radius: 10px;
             background: #6F7A44;
-            font-size: 60px;
+            font-size: 50px;
             color: #FDFFFB;
             font-family: "Inter", sans-serif;
             text-decoration: none;
