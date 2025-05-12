@@ -38,11 +38,17 @@ h3 {
   line-height: normal;
 }
 
-form>div {
-  margin-bottom: 1em;
+p {
+  color: var(--primary_text_dark, #0C2659);
+  font-family: Inter, sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 1em;
 }
 
-label {
+/* label {
   color: var(--primary_hg_dark, #081A3D);
 text-align: center;
 font-family: Inter;
@@ -52,7 +58,7 @@ font-weight: 500;
 line-height: normal;
   display: inline-block;
 
-}
+} */
 
 form {
   display: flex;
@@ -60,6 +66,8 @@ form {
   align-items: center;
   justify-content: center;
 }
+
+
 
 input {
           width: 50vw;
@@ -73,7 +81,7 @@ input {
           font-family: Inter, sans-serif;
         }
 
-        input::placeholder {
+input::placeholder {
           color: var(--primary_text_dark, #0C2659);
           font-style: italic;
           font-size: 2.5rem;
@@ -81,42 +89,51 @@ input {
         }
 
 
-:host {
-            display: inline-block;
-          }
-  
-          a, button {
-            display: flex; /* Makes width/height apply and centers text */
-            justify-content: center;
-            align-items: center;
+.mainButton {
+          background-color: #081A3D;
+          color: #0C2659;
+            box-sizing: border-box;
+              text-decoration: none;
             width: 70vw;
             height: 7vh;
-            flex-shrink: 0;
-            border-radius: 10px;
-            background: #081A3D;
-            font-size: 50px;
-            color: #E6EFFF;
-            font-family: "Inter", sans-serif;
-            text-decoration: none;
+            font-size: 2.5rem;
+            font-family: Inter, sans-serif;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
             border: none;
+            cursor: pointer;
+        }
+.mainButton:hover {
+          background-color: #FDFFFB;
+          color:#081A3D;
+            text-decoration: none;
+          border: 3px solid #081A3D;
+        }
+
+.secondaryButton {
+            background-color: #6F7A44;
+            color: #FDFFFB;
+              text-decoration: none;
             box-sizing: border-box;
+            width: 70vw;
+            height: 7vh;
+            font-size: 2.5rem;
+            font-family: Inter, sans-serif;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            border: none;
             cursor: pointer;
           }
-  
-          a:hover, button:hover {
-            background-color: #F4F8FF;
-            color: #0C2659;
-            border: 3px solid var(--secondary_text_dark, #0C2659);
+
+.secondaryButton:hover {
+            background-color: #FDFFF4;
+            color: #39401E;
+              text-decoration: none;
+            border: 3px solid #39401E;
           }
+
 
           
 
-p {
-  color: var(--primary_text_dark, #0C2659);
-  font-family: Inter, sans-serif;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 1em;
-}
