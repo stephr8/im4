@@ -61,11 +61,55 @@ form {
   justify-content: center;
 }
 
+input {
+          width: 50vw;
+          height: 5vh;
+          border: 1px solid var(--primary_hg_dark, #081A3D);
+          border-radius: 8px;
+          padding: 10px;
+          margin: 10px;
+          box-sizing: border-box;
+          font-size: 2.5rem;
+          font-family: Inter, sans-serif;
+        }
 
-button {
-  padding: 8px 16px;
-  cursor: pointer;
-}
+        input::placeholder {
+          color: var(--primary_text_dark, #0C2659);
+          font-style: italic;
+          font-size: 2.5rem;
+          padding-left: 20px;
+        }
+
+
+:host {
+            display: inline-block;
+          }
+  
+          a, button {
+            display: flex; /* Makes width/height apply and centers text */
+            justify-content: center;
+            align-items: center;
+            width: 70vw;
+            height: 7vh;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #081A3D;
+            font-size: 50px;
+            color: #E6EFFF;
+            font-family: "Inter", sans-serif;
+            text-decoration: none;
+            border: none;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+  
+          a:hover, button:hover {
+            background-color: #F4F8FF;
+            color: #0C2659;
+            border: 3px solid var(--secondary_text_dark, #0C2659);
+          }
+
+          
 
 p {
   color: var(--primary_text_dark, #0C2659);
