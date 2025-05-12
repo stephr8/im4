@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/mainButton.js"></script>
-    <script src="js/secondaryButton.js"></script>
-    <script src="js/mainInput.js"></script>
+
+
+
   </head>
   <body>
     <div class="logo"></div>
-  <img src="images/Logo_vertikal.svg" alt="Site Logo" style="width: 500px; height: 501px; padding: 300px 0px 50px 0px;" />
+  <img src="images/Logo_vertikal.svg" id="logo" alt="Site Logo" />
   </div>
 
 
@@ -20,20 +20,17 @@
       </div>
       <div>
         <input type="password" id="password" required placeholder="Passwort"/>
-      </div> 
-      <div>
-        <a class="mainButton" type="submit">Einloggen</button>
-      </div>
+       </div>
+      
+        <button class="mainButton" type="submit">Einloggen</button>
+      
 </form> 
+  
 
- 
-    <h3>Du hast noch kein Konto?</h3>
-
-    <div>
-      <a class="secondaryButton" href="register.html">Registrieren</button>
-    </div>
-
-    <script src="js/login.js"></script>
+      <h3 class="Untertitel">Du hast noch kein Konto?</h3>
+      <button class="secondaryButton" href="register.html">Registrieren</button>
+    
+<script src="js/login.js"></script>
 
   </body>
 </html>

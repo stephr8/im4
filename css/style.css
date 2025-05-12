@@ -4,8 +4,6 @@ display: flex;
 flex-direction:column;
 align-items: center;
 justify-content: center;
-  margin: 20px;
-  line-height: 1.5;
 }
 
 h1 {
@@ -30,6 +28,7 @@ h2 {
 
 h3 {
   color: var(--primary_hg_dark, #081A3D);
+  align-content: center;
   text-align: center;
   font-family: Inter, sans-serif;
   font-size: 2.5rem;
@@ -48,17 +47,11 @@ p {
   margin-top: 1em;
 }
 
-/* label {
-  color: var(--primary_hg_dark, #081A3D);
-text-align: center;
-font-family: Inter;
-font-size: 3rem;
-font-style: italic;
-font-weight: 500;
-line-height: normal;
-  display: inline-block;
-
-} */
+#logo {
+  width: 200px;
+  height: 250px;
+  padding: 0px 0px 50px 0px;
+}
 
 form {
   display: flex;
@@ -68,72 +61,120 @@ form {
 }
 
 
-
 input {
-          width: 50vw;
-          height: 5vh;
+          
+          width: 16rem;
+          height: 3rem;
           border: 1px solid var(--primary_hg_dark, #081A3D);
           border-radius: 8px;
           padding: 10px;
           margin: 10px;
-          box-sizing: border-box;
-          font-size: 2.5rem;
           font-family: Inter, sans-serif;
+          font-size: 1.3rem;
         }
 
 input::placeholder {
           color: var(--primary_text_dark, #0C2659);
           font-style: italic;
-          font-size: 2.5rem;
-          padding-left: 20px;
+          font-size: 1.3rem;
+          padding-left: 10px;
+          transform: translateY(3px);
+          font-size: 1.3rem;
         }
 
+.mainButton,
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 16rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  text-align: center; 
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px;
+}
 
 .mainButton {
           background-color: #081A3D;
-          color: #0C2659;
-            box-sizing: border-box;
-              text-decoration: none;
-            width: 70vw;
-            height: 7vh;
-            font-size: 2.5rem;
-            font-family: Inter, sans-serif;
-            border-radius: 8px;
-            padding: 10px;
-            margin: 10px;
-            border: none;
-            cursor: pointer;
+          color: #FDFFFB;
+          box-sizing: border-box;
         }
 .mainButton:hover {
           background-color: #FDFFFB;
           color:#081A3D;
-            text-decoration: none;
+          text-decoration: none;
           border: 3px solid #081A3D;
         }
 
 .secondaryButton {
             background-color: #6F7A44;
             color: #FDFFFB;
-              text-decoration: none;
             box-sizing: border-box;
-            width: 70vw;
-            height: 7vh;
-            font-size: 2.5rem;
-            font-family: Inter, sans-serif;
-            border-radius: 8px;
-            padding: 10px;
-            margin: 10px;
-            border: none;
-            cursor: pointer;
           }
 
 .secondaryButton:hover {
             background-color: #FDFFF4;
             color: #39401E;
-              text-decoration: none;
             border: 3px solid #39401E;
           }
 
 
           
+ /* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
 
+@media (min-width: 380px) {
+  .mainButton,
+  .secondaryButton,
+  .input::placeholder,
+  .Untertitel,
+  #logo {
+    font-size: 1.3rem;
+    max-width: 20rem;
+  }
+}
+@media (min-width: 768px) {
+  .mainButton,
+  .secondaryButton,
+  .input::placeholder,
+  .Untertitel,
+  #logo {
+    font-size: 1.3rem;
+    max-width: 20rem;
+  }
+}
+@media (min-width: 1024px) {
+  .mainButton,
+  .secondaryButton,
+  .input::placeholder,
+  .Untertitel,
+  #logo {
+    font-size: 1.3rem;
+    max-width: 20rem;
+  }
+}
+@media (min-width: 1440px) {
+  .mainButton,
+  .secondaryButton,
+  .input::placeholder,
+  .Untertitel,
+  #logo {
+    font-size: 1.3rem;
+    max-width: 20rem;
+  }
+}
+
+/* Base Styles */
+/* 380px+ */
+@media (min-width: 380px) { }
+/* 768px+ */
+@media (min-width: 768px) { }
+/* 1024px+ */
+@media (min-width: 1024px) { }
