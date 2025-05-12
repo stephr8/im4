@@ -37,6 +37,10 @@ h3 {
   line-height: normal;
 }
 
+h3.Untertitel {
+  margin-bottom: -4px;
+}
+
 p {
   color: var(--primary_text_dark, #0C2659);
   font-family: Inter, sans-serif;
@@ -47,10 +51,11 @@ p {
   margin-top: 1em;
 }
 
+
 #logo {
   width: 200px;
   height: 250px;
-  padding: 0px 0px 50px 0px;
+  padding: 60px 0px 50px 0px;
 }
 
 form {
@@ -64,7 +69,7 @@ form {
 input {
           
           width: 16rem;
-          height: 3rem;
+          height: 1.8rem;
           border: 1px solid var(--primary_hg_dark, #081A3D);
           border-radius: 8px;
           padding: 10px;
@@ -74,11 +79,10 @@ input {
         }
 
 input::placeholder {
-          color: var(--primary_text_dark, #0C2659);
+          color: #081A3D;
           font-style: italic;
           font-size: 1.3rem;
           padding-left: 10px;
-          transform: translateY(3px);
           font-size: 1.3rem;
         }
 
