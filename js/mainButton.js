@@ -39,7 +39,8 @@ class MainButton extends HTMLElement {
             border: 3px solid var(--secondary_text_dark, #0C2659);
           }
         </style>
-        <${tag} ${href ? `href="${href}"` : ''}><slot></slot></${tag}>
+
+        <${tag} ${href ? `href="${href}"` : ''} ${type ? `type="${type}"` : ''}><slot></slot></${tag}>
         `;
         if (!href && type === 'submit') {
       this.shadowRoot.querySelector('button').addEventListener('click', () => {
