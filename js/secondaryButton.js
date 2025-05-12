@@ -1,4 +1,4 @@
-class MainButton extends HTMLElement {
+class SecondaryButton extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: 'open' });
@@ -23,9 +23,9 @@ class MainButton extends HTMLElement {
             height: 7vh;
             flex-shrink: 0;
             border-radius: 10px;
-            background: #081A3D;
+            background: #6F7A44;
             font-size: 60px;
-            color: #E6EFFF;
+            color: #FDFFFB;
             font-family: "Inter", sans-serif;
             text-decoration: none;
             border: none;
@@ -34,9 +34,9 @@ class MainButton extends HTMLElement {
           }
   
           a:hover, button:hover {
-            background-color: #F4F8FF;
-            color: #0C2659;
-            border: 3px solid var(--secondary_text_dark, #0C2659);
+            background-color: #FDFFF4;
+            color: #39401E;
+            border: 3px solid var(--secondary_text_dark, #39401E);
           }
         </style>
         <${tag} ${href ? `href="${href}"` : ''}><slot></slot></${tag}>
@@ -44,4 +44,4 @@ class MainButton extends HTMLElement {
     }
   }
   
-  customElements.define('main-button', MainButton);
+  customElements.define('secondary-button', SecondaryButton);
