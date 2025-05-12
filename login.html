@@ -13,19 +13,30 @@
   <img src="images/Logo_vertikal.svg" alt="Site Logo" style="width: 500px; height: 501px; padding: 300px 0px 50px 0px;" />
   </div>
 
-    <form id="loginForm">
+
+<form id="loginForm">
       <div>
-      
+        <label>Email</label>
+        <input type="email" id="email" required />
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" id="password" required />
+      </div>
+    </form>
+
+
+    <!-- <form id="loginForm">
+      <div>
 <main-input class="mainInput" type="email" placeholder="E-Mail"></main-input>
       </div>
       <div>
-   
 <main-input class="mainInput" type="password" placeholder="Passwort"></main-input>
-      </div>
-     
-    </form>
+      </div>  
+    </form> -->
+
 <p></p>
-    <main-button class="mainButton" href="index.html">Einloggen</main-button>
+    <main-button class="mainButton" type="submit" href="index.html">Einloggen</main-button>
     <h3>Du hast noch kein Konto?</h3>
       <secondary-button class="secondaryButton" href="register.html">Registrieren</secondary-button>
      
