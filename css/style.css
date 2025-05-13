@@ -124,16 +124,77 @@ input::placeholder {
 }
 
 .secondaryButton:hover {
-  background-color: #FDFFF4;
+  background-color: #FDFFFB;
   color: #39401E;
   border: 3px solid #39401E;
 }
 
+/* ------------------------------------------------------- */
+
+.container {
+  max-width: 720px; /* oder 100% für volle Breite, je nach Design */
+  margin: 0 auto;   /* zentriert horizontal */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+
+.topbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%; /* passt sich der container-Breite an */
+  background-color: #FDFFFB;
+  font-family: Inter, sans-serif;
+}
+
+.headerTitel {
+  font-size: 1.5rem;
+  color: #081A3D;
+  font-weight: bold;
+  width: 100%; /* passt sich der container-Breite an */
+}
+
+.topbar-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button {
+  justify-content: flex-start;
+  font-size: 2rem;
+  color: #081A3D;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.help-icon {
+  justify-content: flex-end;
+  font-size: 1.6rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #081A3D;
+  color: #081A3D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.help-icon:hover {
+  background-color: #081A3D;
+  color: #FDFFFB;
+}
+
+
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .category-tile {
@@ -166,7 +227,18 @@ input::placeholder {
   text-align: center;
 }
 
+.back-button,
+.help-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
 
+/* ------------------------------------------------------- */
 
 .accordion {
   margin-bottom: 10px;
