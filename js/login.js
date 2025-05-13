@@ -25,5 +25,5 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     console.error("Error:", error);
     alert("Something went wrong!");
   }
-  }
+  });
 });
