@@ -7,33 +7,33 @@
     <!-- <link rel="icon" type="image/svg+xml" href="images/Logo_vertikal.svg" /> -->
   </head>
   <body>
-    <h1>Register</h1>
+    <div class="logo"></div>
+  <img src="images/Logo_vertikal.svg" id="logo" alt="Site Logo" />
+  </div>
 
     <form method="POST" id="registerForm">
       <div>
-      <label>Benutzername</label>
-      <input type="text" id="username" name="username" required />
+
+      <input type="text" id="username" name="username" required placeholder="Benutzername"/>
       </div>
       <div>
-      <label>Vorname</label>
-      <input type="text" id="first_name" name="first_name" required />
+      <input type="text" id="first_name" name="first_name" required placeholder="Vorname"/>
       </div>
       <div>
-      <label>Nachname</label>
-      <input type="text" id="last_name" name="last_name" required />
+      <input type="text" id="last_name" name="last_name" required placeholder="Nachname"/>
       </div>
       <div>
-      <label>Email</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" name="email" required placeholder="E-Mail"/>
       </div>
       <div>
-      <label>Password</label>
-      <input type="password" id="password" name="password" required />
+      <input type="password" id="password" name="password" required placeholder="Passwort"/>
       </div>
-      <button type="submit">Register</button>
+      <button class="secondaryButton" type="submit">Registrieren</button>
     </form>
 
-    <p>Already have an account? <a href="login.html">Login here</a>.</p>
+    <h3 class="Untertitel">Du hast schon ein Konto?</h3>
+    <button class="mainButton" onclick="window.location.href="login.html">Einloggen</button>
+
 
     <script src="js/register.js"></script>
   </body>
