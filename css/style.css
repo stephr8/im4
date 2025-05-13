@@ -1,9 +1,9 @@
 /* style.css */
 body {
-display: flex;
-flex-direction:column;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -67,24 +67,23 @@ form {
 
 
 input {
-          
-          width: 16rem;
-          height: 1.8rem;
-          border: 1px solid var(--primary_hg_dark, #081A3D);
-          border-radius: 8px;
-          padding: 10px;
-          margin: 10px;
-          font-family: Inter, sans-serif;
-          font-size: 1.3rem;
-        }
+  width: 16rem;
+  height: 1.8rem;
+  border: 1px solid var(--primary_hg_dark, #081A3D);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  font-family: Inter, sans-serif;
+  font-size: 1.3rem;
+}
 
 input::placeholder {
-          color: #081A3D;
-          font-style: italic;
-          font-size: 1.3rem;
-          padding-left: 10px;
-          font-size: 1.3rem;
-        }
+  color: #081A3D;
+  font-style: italic;
+  font-size: 1.3rem;
+  padding-left: 10px;
+  font-size: 1.3rem;
+}
 
 .mainButton,
 .secondaryButton {
@@ -96,7 +95,7 @@ input::placeholder {
   height: 3rem;
   border: none;
   border-radius: 10px;
-  text-align: center; 
+  text-align: center;
   text-decoration: none;
   font-family: Inter, sans-serif;
   font-size: 2.5rem;
@@ -106,35 +105,66 @@ input::placeholder {
 }
 
 .mainButton {
-          background-color: #081A3D;
-          color: #FDFFFB;
-          box-sizing: border-box;
-        }
+  background-color: #081A3D;
+  color: #FDFFFB;
+  box-sizing: border-box;
+}
+
 .mainButton:hover {
-          background-color: #FDFFFB;
-          color:#081A3D;
-          text-decoration: none;
-          border: 3px solid #081A3D;
-        }
+  background-color: #FDFFFB;
+  color: #081A3D;
+  text-decoration: none;
+  border: 3px solid #081A3D;
+}
 
 .secondaryButton {
-            background-color: #6F7A44;
-            color: #FDFFFB;
-            box-sizing: border-box;
-          }
+  background-color: #6F7A44;
+  color: #FDFFFB;
+  box-sizing: border-box;
+}
 
 .secondaryButton:hover {
-            background-color: #FDFFF4;
-            color: #39401E;
-            border: 3px solid #39401E;
-          }
+  background-color: #FDFFF4;
+  color: #39401E;
+  border: 3px solid #39401E;
+}
 
 
-          
- /* ------------------------------------------------------- */
+.accordion {
+  margin-bottom: 10px;
+  background-color: #081A3D;
+  color: #FDFFFB;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background-color: #081A3D;
+  color: #FDFFFB;
+  padding: 10px;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accordion-content {
+  padding: 10px;
+  display: none;
+  background-color: #fff;
+}
+
+
+
+/* ------------------------------------------------------- */
 /* ------------------------------------------------------- */
 
 @media (min-width: 380px) {
+
   .mainButton,
   .secondaryButton,
   .input::placeholder,
@@ -144,7 +174,9 @@ input::placeholder {
     max-width: 20rem;
   }
 }
+
 @media (min-width: 768px) {
+
   .mainButton,
   .secondaryButton,
   .input::placeholder,
@@ -154,7 +186,9 @@ input::placeholder {
     max-width: 20rem;
   }
 }
+
 @media (min-width: 1024px) {
+
   .mainButton,
   .secondaryButton,
   .input::placeholder,
@@ -164,7 +198,9 @@ input::placeholder {
     max-width: 20rem;
   }
 }
+
 @media (min-width: 1440px) {
+
   .mainButton,
   .secondaryButton,
   .input::placeholder,
@@ -177,8 +213,10 @@ input::placeholder {
 
 /* Base Styles */
 /* 380px+ */
-@media (min-width: 380px) { }
+@media (min-width: 380px) {}
+
 /* 768px+ */
-@media (min-width: 768px) { }
+@media (min-width: 768px) {}
+
 /* 1024px+ */
-@media (min-width: 1024px) { }
+@media (min-width: 1024px) {}

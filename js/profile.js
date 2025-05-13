@@ -1,18 +1,60 @@
-async function loadData() {
-    const url = '/api/profile.php'; // mit korrekter API-URL ersetzen
-    try {
-        const response = await fetch(url);
-        return await response.json();
-    } catch (error) {
-        console.error(error);
-        return false;
+    // _______________________________________________________________
+    // Loading the profile data from the API
+    // _______________________________________________________________
+
+    async function loadData() {
+        const url = '/api/profile/readProfile.php'; // mit korrekter API-URL ersetzen
+        try {
+            const response = await fetch(url);
+            return await response.json();
+        } catch (error) {
+            console.error(error);
+            return false;
+        }
     }
-}
-const data = await loadData();
-console.log(data); // gibt die Daten der API oder false in der Konsole aus
+    const data = await loadData();
+    console.log(data);// gibt die Daten der API oder false in der Konsole aus
 
-const domFirstName = document.querySelector('#firstName');
-const domLastName = document.querySelector('#lastName');
+    const domfirstName = document.querySelector('#firstName');
+    const domlastName = document.querySelector('#lastName');
 
-domFirstName.innerHTML = data.first_name;
-domLastName.innerHTML = data.last_name;
+    domfirstName.innerHTML = data.user.first_name;
+    domlastName.innerHTML = data.user.last_name;
+
+    // _______________________________________________________________
+    // Adding Vorname und Nachname to the Database
+    // _______________________________________________________________
+
+
+    const inputFirstName = document.querySelector('#inputFirstName');
+    const inputLastName = document.querySelector('#inputLastName');
+    const saveButton = document.querySelector('#Btn_saveInfo');
+
+    saveButton.addEventListener('click', async () => {
+        let firstName = inputFirstName.value;
+        let lastName = inputLastName.value;
+        const url = '/api/profile/createProfile.php'; // mit korrekter API-URL ersetzen
+        const data = {
+            first_name: firstName,
+            last_name: lastName
+        };
+        const dataAdded = await addData(url, data);
+        console.log(dataAdded);
+    });
+
+    //I want to post the data to the API and then reload the page
+    async function addData(url, data) {
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            return await response.json();
+        } catch (error) {
+            console.error(error);
+            return false;
+        }
+    }

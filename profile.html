@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <title>Protected Page</title>
@@ -14,6 +14,20 @@
     <p id="userFirstName">Vorname: <span id="firstName">Test</span></p>
     <p id="userLastName">Nachname: <span id="lastName">Test</span></p>
    </section>
+
+<section id="addAdditionalInfo">
+  <h2>Zusätzliche Informationen</h2>
+  <input type="text" id="inputFirstName" placeholder="Vorname" />
+  <input type="text" id="inputLastName" placeholder="Nachname" />
+  </section>
+  <button id="Btn_saveInfo">Speichern</button>
+
+  <section id="updateBirthday">
+    <h2>Geburtsdatum aktualisieren</h2>
+    <input type="number" id="inputBirthday" />
+    <button id="Btn_updateBirthday">Jahr Aktualisieren</button>
+  </section>
+
     <div id="protectedContent"></div>
 
     <button id="logoutBtn">Logout</button>
