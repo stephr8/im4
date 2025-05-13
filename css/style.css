@@ -251,7 +251,56 @@ input::placeholder {
 }
 
 /* ------------------------------------------------------- */
+body {
+      font-family: Inter, sans-serif;
+      margin: 2em;
+    }
 
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5em;
+      color: #0C2659;
+    }
+
+    .accordion-item {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1em;
+      margin-bottom: 1em;
+      background-color: #f9f9f9;
+      position: relative;
+    }
+
+    .accordion-toggle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      padding-left: 2.5rem;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 0.5em 2.5rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .checkbox-container {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+    }
+
+    .checkbox-container input {
+      transform: scale(1.5);
+      cursor: pointer;
+    }
+/* 
 .accordion {
   margin-bottom: 10px;
   background-color: #081A3D;
@@ -280,7 +329,7 @@ input::placeholder {
   background-color: #fff;
 }
 
-
+ */
 
 /* ------------------------------------------------------- */
 /* ------------------------------------------------------- */

@@ -1,37 +1,107 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Login</title>
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Finanzen</title>
+  <link rel="stylesheet" href="css/style.css" />
 
+</head>
+<body>
 
+  <h2>Finanzen</h2>
 
-  </head>
-  <body>
-    <div class="logo"></div>
-  <img src="images/Logo_vertikal.svg" id="logo" alt="Site Logo" />
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">Kontenübersicht</button>
+    <div class="accordion-content">
+      <p>Füge hier IBANs, Kontostände oder Zugangsdaten hinzu.</p>
+    </div>
   </div>
 
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">Versicherungen</button>
+    <div class="accordion-content">
+      <p>Liste deiner Versicherungen (z. B. Hausrat, Unfall, Leben).</p>
+    </div>
+  </div>
 
-<form id="loginForm">
-      <div>
-        <input type="email" id="email" required placeholder="E-Mail"/>
-      </div>
-      <div>
-        <input type="password" id="password" required placeholder="Passwort"/>
-       </div>
-      
-        <button class="mainButton" type="submit">Einloggen</button>
-      
-</form> 
-  
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">Kredite / Schulden</button>
+    <div class="accordion-content">
+      <p>Bankkredite, offene Rechnungen, Rückzahlungspläne.</p>
+    </div>
+  </div>
 
-      <h3 class="Untertitel">Du hast noch kein Konto?</h3>
-      <button class="secondaryButton" onclick="window.location.href='register.html'">Registrieren</button>
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">Crypto-Wallet</button>
+    <div class="accordion-content">
+      <p>Wallet-Adressen, Zugänge und Hinweise zur Verwahrung.</p>
+    </div>
+  </div>
 
-    
-<script src="js/login.js"></script>
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">Schliessfach / Tresor</button>
+    <div class="accordion-content">
+      <p>Wo befindet sich dein physischer Safe und was ist darin?</p>
+    </div>
+  </div>
 
-  </body>
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">Steuern</button>
+    <div class="accordion-content">
+      <p>Informationen zu Steuerbescheiden oder offenen Erklärungen.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">AHV</button>
+    <div class="accordion-content">
+      <p>AHV-Nummer, Beitragsübersicht und persönliche Bemerkungen.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <label class="checkbox-container">
+      <input type="checkbox" />
+    </label>
+    <button class="accordion-toggle">Bürgschaften</button>
+    <div class="accordion-content">
+      <p>Für wen bürgst du oder wer bürgt für dich?</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggles = document.querySelectorAll(".accordion-toggle");
+
+      toggles.forEach(toggle => {
+        toggle.addEventListener("click", () => {
+          const content = toggle.nextElementSibling;
+          content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
+  </script>
+
+</body>
 </html>
