@@ -170,6 +170,15 @@ input::placeholder {
   color: #081A3D;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #081A3D;
+  color: #FDFFFB;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .help-icon {
@@ -188,6 +197,9 @@ input::placeholder {
 .help-icon:hover {
   background-color: #081A3D;
   color: #FDFFFB;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 
