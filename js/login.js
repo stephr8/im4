@@ -1,4 +1,5 @@
 // login.js
+document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -23,5 +24,6 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   } catch (error) {
     console.error("Error:", error);
     alert("Something went wrong!");
+  }
   }
 });
