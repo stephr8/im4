@@ -129,6 +129,44 @@ input::placeholder {
   border: 3px solid #39401E;
 }
 
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+  gap: 20px;
+  padding: 20px;
+}
+
+.category-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #081A3D;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #FDFFFB;
+  font-family: Inter, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-tile .emoji {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.category-tile .title {
+  font-size: 1rem;
+  text-align: center;
+}
+
+
 
 .accordion {
   margin-bottom: 10px;
