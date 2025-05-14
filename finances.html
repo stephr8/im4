@@ -16,12 +16,11 @@
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="checkbox-circle"></div>
       <div class="accordion-title">Kontenübersicht</div>
-      <div class="accordion-icon">&#9660;</div> <!-- ▼ -->
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
     </div>
     <div class="accordion-body">
       <p>
-        Hast du dein Testament verfasst und überprüfen lassen? Ist alles sauber
-        formuliert, notariell beurkundet oder handschriftlich gültig aufgesetzt?
+        Welche Konten sind vorhanden? Wo sind sie? Wer hat Zugriff?
       </p>
       <div class="accordion-footer">
         <span><h3>Dokumente hinzufügen</h3></span>
@@ -40,7 +39,7 @@
     const isOpen = body.style.display === 'block';
 
     body.style.display = isOpen ? 'none' : 'block';
-    icon.innerHTML = isOpen ? '&#9660;' : '&#9650;'; // ▼ oder ▲
+    icon.src = isOpen ? 'images/chevronsmalldown.svg' : 'images/chevronsmallup.svg';
   }
   </script>
 
