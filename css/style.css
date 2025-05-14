@@ -166,19 +166,10 @@ input::placeholder {
 
 .back-button {
   justify-content: flex-start;
-  font-size: 2rem;
   color: #081A3D;
   text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
-}
-
-.back-button:hover {
-  background-color: #081A3D;
-  color: #FDFFFB;
-  text-decoration: none;
-  border-radius: 50%;
-  padding: 10px;
+  background-color: #FDFFFB;
 }
 
 .help-icon {
@@ -193,13 +184,6 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-.help-icon:hover {
-  background-color: #081A3D;
-  color: #FDFFFB;
-  text-decoration: none;
-  border-radius: 50%;
-  padding: 10px;
 }
 
 
@@ -245,9 +229,8 @@ input::placeholder {
   height: 40px;
   border-radius: 50%;
   border: none;
-  font-size: 1.5rem;
-  background-color: #e0e0e0;
   cursor: pointer;
+  background-color: #FDFFFB;
 }
 
 /* ------------------------------------------------------- */
