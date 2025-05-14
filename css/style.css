@@ -9,7 +9,7 @@ body {
 h1 {
   color: var(--primary_text_dark, #081A3D);
   font-family: Inter, sans-serif;
-  font-size: 7rem;
+  font-size: 5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -36,9 +36,10 @@ h3 {
   line-height: normal;
 }
 
-h3.Untertitel {
+.Untertitel {
   margin-bottom: -4px;
   color: var(--primary_hg_dark, #081A3D);
+
 }
 
 
@@ -46,7 +47,7 @@ h3.Untertitel {
 h4 {
   color: var(--primary_hg_dark, #081A3D);
   font-family: Inter, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -356,6 +357,7 @@ input::placeholder {
  */
 
 /* ------------------------------------------------------- */
+/* Responsive Styles */
 /* ------------------------------------------------------- */
 
 @media (min-width: 380px) {
@@ -365,8 +367,11 @@ input::placeholder {
   .input::placeholder,
   .Untertitel,
   #logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     max-width: 20rem;
+  }
+  h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -377,8 +382,11 @@ input::placeholder {
   .input::placeholder,
   .Untertitel,
   #logo {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     max-width: 20rem;
+  }
+  h1 {
+    font-size: 4rem;
   }
 }
 
@@ -392,6 +400,9 @@ input::placeholder {
     font-size: 1.3rem;
     max-width: 20rem;
   }
+  h1 {
+    font-size: 4.5rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -401,8 +412,11 @@ input::placeholder {
   .input::placeholder,
   .Untertitel,
   #logo {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     max-width: 20rem;
+  }
+  h1 {
+    font-size: 5rem;
   }
 }
 
