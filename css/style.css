@@ -7,17 +7,16 @@ body {
 }
 
 h1 {
-  color: var(--primary_text_dark, #0C2659);
+  color: var(--primary_text_dark, #081A3D);
   font-family: Inter, sans-serif;
   font-size: 7rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 1em;
 }
 
 h2 {
-  color: var(--primary_text_dark, #0C2659);
+  color: var(--primary_text_dark, #081A3D);
   font-family: Inter, sans-serif;
   font-size: 3.1rem;
   font-style: normal;
@@ -39,10 +38,23 @@ h3 {
 
 h3.Untertitel {
   margin-bottom: -4px;
+  color: var(--primary_hg_dark, #081A3D);
+}
+
+
+
+h4 {
+  color: var(--primary_hg_dark, #081A3D);
+  font-family: Inter, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
 }
 
 p {
-  color: var(--primary_text_dark, #0C2659);
+  color: var(--primary_text_dark, #081A3D);
   font-family: Inter, sans-serif;
   font-size: 3rem;
   font-style: normal;
