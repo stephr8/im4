@@ -33,12 +33,13 @@ createBackpackButton.addEventListener('click', async () => {
 
     if (result && result.success) {
         console.log('Backpack created with ID:', result.backpack_id);
-        alert('Backpack created successfully!');
+        window.location.href = 'backpack.html'; // ✅ redirect here
     } else {
         console.log('Error:', result.error || 'Unknown error');
-        alert('Error creating backpack');
+        alert(result.error || 'Fehler beim Erstellen des Backpacks');
     }
 });
+
 
 // _______________________________________________________________
 // Handling User Tasks and Checking the Response

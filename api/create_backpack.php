@@ -23,6 +23,22 @@ require_once '../system/config.php';
 $loggedInUserId = $_SESSION['user_id'];
 
 try {
+    // Check if the user has already created a backpack
+    $checkStmt = $pdo->prepare("SELECT id FROM backpack WHERE user_id = :user_id");
+    $checkStmt->bindParam(':user_id', $loggedInUserId, PDO::PARAM_INT);
+    $checkStmt->execute();
+    $existingBackpack = $checkStmt->fetch(PDO::FETCH_ASSOC);
+
+  if ($existingBackpack) {
+    echo json_encode([
+        "success" => true,
+        "message" => "Backpack already exists",
+        "backpack_id" => $existingBackpack['id']
+    ]);
+    exit;
+}
+
+
     // Begin transaction
     $pdo->beginTransaction();
 
