@@ -56,7 +56,7 @@ h4 {
 p {
   color: var(--primary_text_dark, #081A3D);
   font-family: Inter, sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -246,55 +246,78 @@ input::placeholder {
 }
 
 /* ------------------------------------------------------- */
-body {
-      font-family: Inter, sans-serif;
-      margin: 2em;
-    }
 
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 1.5em;
-      color: #0C2659;
-    }
+:root {
+  --main-color: #0A1F44;        /* deine Hauptfarbe */
+  --background-color: #F6F8FB;  /* Hintergrund im offenen Zustand */
+  --text-color: #0A1F44;
+}
 
-    .accordion-item {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 1em;
-      margin-bottom: 1em;
-      background-color: #f9f9f9;
-      position: relative;
-    }
+.accordion {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: sans-serif;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
-    .accordion-toggle {
-      font-size: 1.5rem;
-      font-weight: bold;
-      background: none;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      text-align: left;
-      padding-left: 2.5rem;
-    }
+.accordion-header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  cursor: pointer;
+  width: 48rem;
+}
 
-    .accordion-content {
-      display: none;
-      padding: 0.5em 2.5rem;
-      font-size: 1.2rem;
-      color: #333;
-    }
+.checkbox-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 
-    .checkbox-container {
-      position: absolute;
-      top: 1em;
-      left: 1em;
-    }
+.accordion-title {
+  flex-grow: 1;
+  color: var(--primary_hg_dark, #E6EFFF);
+  align-content: center;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
-    .checkbox-container input {
-      transform: scale(1.5);
-      cursor: pointer;
-    }
+.accordion-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-body {
+  display: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem;
+}
+
+.accordion-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.file-icon {
+  font-size: 1.2rem;
+}
+
+
 /* 
 .accordion {
   margin-bottom: 10px;
