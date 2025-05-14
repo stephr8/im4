@@ -145,7 +145,7 @@ input::placeholder {
 /* ------------------------------------------------------- */
 
 .container {
-  max-width: 720px;
+  max-width: 45rem;
   /* oder 100% für volle Breite, je nach Design */
   margin: 0 auto;
   /* zentriert horizontal */
@@ -265,9 +265,18 @@ input::placeholder {
   border-radius: 12px;
   overflow: hidden;
   font-family: sans-serif;
-  margin: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  width: 48rem;
+  padding: 4px;
+  margin: 0 auto
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  /* passt sich der container-Breite an */
+  background-color: #FDFFFB;
+  font-family: Inter, sans-serif;
+
 }
 
 .accordion-header {
@@ -275,9 +284,11 @@ input::placeholder {
   color: white;
   padding: 2rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: rem;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .checkbox-circle {
@@ -285,7 +296,8 @@ input::placeholder {
   height: 2rem;
   border: 0.3rem solid white;
   border-radius: 50%;
-  flex-shrink: 0;
+  justify-content: flex-start;
+  display: flex;
 }
 
 .accordion-title {
@@ -298,11 +310,15 @@ input::placeholder {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  display: flex;
+  justify-content: center;
 }
 
 .accordion-icon {
   width: 3rem;
   transition: transform 0.3s ease;
+  justify-content: flex-end;
+  display: flex;
 }
 
 .accordion-body {
