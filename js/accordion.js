@@ -1,8 +1,15 @@
-/* document.querySelectorAll('.accordion-header').forEach(button => {
-  button.addEventListener('click', () => {
-    const content = button.nextElementSibling;
+ function toggleCheckbox(checkbox) {
+      const isChecked = checkbox.src.includes('uncheckedmark.svg');
+      checkbox.src = isChecked ? 'images/checkedmark.svg' : 'images/uncheckedmark.svg';
+    }
+ 
+    function toggleAccordion(header) {
+    const accordion = header.parentElement;
+    const body = accordion.querySelector('.accordion-body');
+    const icon = header.querySelector('.accordion-icon');
 
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  });
-}); */
+    const isOpen = body.style.display === 'block';
 
+    body.style.display = isOpen ? 'none' : 'block';
+    icon.src = isOpen ? 'images/chevronsmalldown.svg' : 'images/chevronsmallup.svg';
+  }
