@@ -1,3 +1,85 @@
+# App-Wegbereiter
+
+Wegbereiter ist eine Webanwendung, die Menschen dabei unterstützt, wichtige persönliche Informationen, Dokumente und Verantwortlichkeiten digital zu strukturieren und weiterzugeben – z. B. für die Nachlassplanung oder zur Unterstützung nahestehender Personen.
+
+## Funktionen
+
+- Benutzerregistrierung und Login (mit Sessions und Passwortverschlüsselung)
+- Persönliches Profil (Vorname, Adresse, AHV-Nummer, Vertrauensperson etc.)
+- Kategorienübersicht (z. B. Finanzen, Gesundheit, Wohnen etc.)
+- Accordion-Checklisten pro Kategorie (mit Checkbox und Dokumenten-Upload)
+- Dateien hoch- und herunterladen, zentral gespeichert im Serververzeichnis
+- Verwaltung von Aufgaben: is_checked Status direkt in der Datenbank gespeichert
+- Rollenverwaltung: Admin kann Benutzer für Rucksackzugriff bestätigen
+- Responsives Design für Desktop, Tablet und Mobile
+- Datenschutzgerechte Umsetzung (keine externen Tracker, Sessions, Rechteprüfung)
+
+## Technologien
+
+- HTML, CSS, JavaScript (Vanilla)
+- PHP (mit PDO für sichere Datenbankabfragen)
+- MySQL (Datenbankstruktur im ERM-Modell)
+- Visual Studio Code + Five Server / PHP-Built-in Server
+- Optionaler Einsatz von Figma für UI-Prototyping
+
+## Projektstruktur
+
+
+
+
+## Datenbankmodell (Auszug)
+
+- `users` – Login-Informationen (username, email, password)
+- `user_profiles` – persönliche Infos (Vorname, Adresse etc.)
+- `tasks` – Checklistenpunkte (pro Kategorie)
+- `documents` – Uploads pro Aufgabe
+- `backpacks` – Struktur pro Nutzer
+- `backpack_access` – Zugriff und Rollenverwaltung
+
+## Installation (lokal)
+
+1. Projekt in lokalen Serverordner legen (z. B. XAMPP htdocs oder php -S starten)
+2. Datenbank importieren (z. B. über phpMyAdmin):  
+   → Datei: `a42r14_im4.sql`
+3. In `system/config.php` DB-Verbindung einrichten
+4. Projekt starten:  
+   `http://localhost/weg-bereiter/index.html`
+
+## Admin-Zugriff
+
+- Registrierung über register.html
+- Adminrechte können über die Datenbank manuell gesetzt werden (`backpack_access.isAdmin = 1`)
+
+## ToDos
+
+- Validierung bei Dateiuploads (Typen/Größe)
+- E-Mail-Bestätigung beim Login (optional)
+- Mehrsprachigkeit (z. B. Deutsch / Französisch)
+
+## Geplante ToDos für die Zukunft
+
+---
+
+## Persönliche Reflexion
+
+Dieses Projekt war wie so oft in diesem Fach eine emotionale Achterfahrt. Es gab sehr frustrierende Momente, aber auch glückliche und stolze Momente, wenn man einen kleinen Erfolg feiern konnte, weil etwas nach langem Probieren endlich funktioniert hat. Es mir geholfen, die verschiedenen Teile einer dynamischen Webanwendung in der Praxis zumindest ein bisschen zu verstehen: Wie Frontend, Backend und Datenbank miteinander kommunizieren, wie wichtig Datenvalidierung und Sicherheit (z. B. durch PDO) sind, und wie sich Benutzerführung durch gute Struktur und Design verbessern lässt. Das Verständnis reicht nicht dafür, dass ich es komplett alleine machen könnte, aber es reicht aus, um die richtigen Fragen zu stellen oder Profi-Entwicklern sagen zu können, was ich wollen würde.
+Ich habe gelernt, sauber mit Git und Projektstruktur zu arbeiten, und habe besonders durch die Arbeit mit fetch(), Sessions und responsivem CSS mein Verständnis für moderne Webentwicklung vertieft.
+
+Am Anfang war es herausfordernd, alle Zustände (z. B. ob ein Task gecheckt ist, oder ob ein Benutzerprofil schon existiert) korrekt abzubilden. Durch gezielte Debugging-Tools (Developer Tools, PHP-Fehleranzeigen, Konsolen-Logging) habe ich gelernt, systematisch zu testen und Probleme zu beheben.
+
+Ich bin stolz darauf, dass wir viele unserer Herausforderungen meistern konnten (mit Unterstützung) und das gelernte Wissen aus den letzten Semestern wieder auffrischen konnten, da diese bei mir zumindest schon wieder etwas in den Hintergrund meines Gedächtnis gerutscht sind.
+
+---
+
+## 👥 Autor
+
+- Name: [Dein Name hier]  
+- Klasse: IM4  
+- Projektzeitraum: Frühling 2025
+
+
+
+
 # Supabase SQL Übungen
 
 In diesem Dokument findest du Übungen, um SQL-Operationen (Read, Insert, Update, Delete) zu verstehen und zu üben. Der SQL-Code wird direkt im SQL-Editor in phpmyadmin geschrieben und nicht in einem PHP bzw. JavaScript-File.
