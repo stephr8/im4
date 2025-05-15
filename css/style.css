@@ -150,7 +150,6 @@ input::placeholder {
   margin: 0 auto;
   /* zentriert horizontal */
   padding: 1rem;
-  box-sizing: border-box;
 }
 
 
@@ -336,6 +335,7 @@ input::placeholder {
   padding-left: 1rem;
   padding-right: 1rem;
   font-family: Inter, sans-serif;
+  display: none;
 }
 
 .accordion-text {
