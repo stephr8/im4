@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>user-information</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+
+    <div class="container">
+      <div class="topbar">
+      <button class="back-button" onclick="window.location.href='protected.html'">
+        <img src="images/arrowleft.svg" alt="Back" />
+      </button>
+       <h3 class="headerTitel">Persönliche Angaben</h3>
+      <button class="help-button" onclick="window.location.href='help.html'">
+        <img src="images/questioncircle.svg" alt="Help" />
+      </button></button>
+    </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="checkbox-circle"></div>
+      <div class="accordion-title">Kontenübersicht</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+    <div class="accordion-body">
+      <form id="loginForm">
+       <div>
+        <input type="text" id="username" required placeholder="Passwort"/>
+       </div>
+       <div>
+        <input type="text" id="first_name" required placeholder="E-Mail"/>
+       </div>
+       <div>
+        <input type="text" id="last_name" required placeholder="Passwort"/>
+       </div>
+       <div>
+        <input type="text" id="street" required placeholder="Passwort"/>
+       </div>
+       <div>
+        <input type="number" id="zip" required placeholder="Passwort"/>
+       </div>
+       <div>
+        <input type="text" id="town" required placeholder="Passwort"/>
+       </div>
+       <div>
+        <input type="email" id="email"  required placeholder="Passwort"/>
+       </div>
+       <div>
+        <input type="date" id="birthdate" required placeholder="Passwort"/>
+       </div>
+        <div>
+          <input type="text" id="nationality" required placeholder="Passwort"/>
+        </div>
+        <div>
+          <input type="number" id="ahv" required placeholder="AHV-Nummer"/>
+        </div>
+        <div>
+          <input type="text" id="trust_person" required placeholder="Vertrauensperson"/>
+        </div>
+      </form> 
+
+
+
+  <script>
+    function toggleAccordion(header) {
+    const accordion = header.parentElement;
+    const body = accordion.querySelector('.accordion-body');
+    const icon = header.querySelector('.accordion-icon');
+
+    const isOpen = body.style.display === 'block';
+
+    body.style.display = isOpen ? 'none' : 'block';
+    icon.src = isOpen ? 'images/chevronsmalldown.svg' : 'images/chevronsmallup.svg';
+  }
+  </script>
+
+<!--     <script src="js/protected.js"></script> -->
+
+</body>
+
+</html>
