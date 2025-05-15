@@ -28,6 +28,13 @@
 
     const inputFirstName = document.querySelector('#inputFirstName');
     const inputLastName = document.querySelector('#inputLastName');
+    const inputUsername = document.querySelector('#inputUsername');
+    const inputStreet = document.querySelector('#inputStreet');
+    const inputZip = document.querySelector('#inputZip');
+    const inputTown = document.querySelector('#inputTown');
+    const inputBirthdate = document.querySelector('#inputBirthdate');
+    const inputNationality = document.querySelector('#inputNationality');
+    const inputTrust_person = document.querySelector('#inputTrust_person');
     const saveButton = document.querySelector('#Btn_saveInfo');
 
     saveButton.addEventListener('click', async () => {
