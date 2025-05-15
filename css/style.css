@@ -265,9 +265,7 @@ input::placeholder {
 .accordion {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-
   font-family: sans-serif;
-/*   padding: 4px; */
   margin: 0 auto;
   justify-content: space-around;
   flex-direction: column;
@@ -277,7 +275,6 @@ input::placeholder {
   background-color: #FDFFFB;
   font-family: Inter, sans-serif;
   display: block;
-  max-width: 45rem;
   /* oder 100% für volle Breite, je nach Design */
   margin: 0 auto;
   /* zentriert horizontal */
@@ -297,15 +294,14 @@ input::placeholder {
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
-  width: 100%;
-  max-width: 45rem; 
 }
 
 .checkbox-circle {
   justify-content: flex-start;
   color: #FDFFFB;
-  curser: pointer;
+  cursor: pointer;
   width: 2rem;
+  height: 2rem;
   border: 0.3rem solid #FDFFFB;
   border-radius: 50%;
   display: flex;
@@ -319,7 +315,6 @@ input::placeholder {
   justify-content: center;
   font-size: 1.5rem;
   font-weight: bold;
-  width: 100%;
 }
 
 .accordion-icon {
@@ -341,8 +336,6 @@ input::placeholder {
   padding-left: 1rem;
   padding-right: 1rem;
   font-family: Inter, sans-serif;
-  width: 45rem;
-  max-width: 100%;
 }
 
 .accordion-text {
