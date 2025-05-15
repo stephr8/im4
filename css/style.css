@@ -265,19 +265,23 @@ input::placeholder {
 .accordion {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  overflow: hidden;
+
   font-family: sans-serif;
 /*   padding: 4px; */
   margin: 0 auto;
- 
-  display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   margin-bottom: 1rem;
   /* passt sich der container-Breite an */
   background-color: #FDFFFB;
   font-family: Inter, sans-serif;
-
+  display: block;
+  max-width: 45rem;
+  /* oder 100% für volle Breite, je nach Design */
+  margin: 0 auto;
+  /* zentriert horizontal */
+  box-sizing: border-box;
 }
 
 .accordion-header {
@@ -289,21 +293,22 @@ input::placeholder {
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
   width: 100%;
+  max-width: 45rem; 
 }
 
 .checkbox-circle {
   justify-content: flex-start;
   color: #FDFFFB;
   curser: pointer;
-/*   width: 2rem;
-  height: 2rem; */
-  border: 0.3rem solid white;
+  width: 2rem;
+  border: 0.3rem solid #FDFFFB;
   border-radius: 50%;
+  display: flex;
 }
 
 .accordion-title {
@@ -327,11 +332,25 @@ input::placeholder {
 }
 
 .accordion-body {
-  display: none;
+  display: block;
+  flex-direction: column;
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 2rem;
-  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: Inter, sans-serif;
+  width: 45rem;
+  max-width: 100%;
+}
+
+.accordion-text {
+  color: #081A3D;
+  font-family: Inter, sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: left;
 }
 
 .accordion-footer {
@@ -339,14 +358,17 @@ input::placeholder {
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  margin-top: 1rem;
   width: 100%;
 }
 
 .file-icon {
-  width: 3.5rem;
+  width: 2rem;
 }
 
+/* Klasse, die beim Öffnen gesetzt wird */
+.accordion.open .accordion-body {
+  max-height: auto; /* hoch genug für deinen Inhalt */
+}
 
 /* 
 .accordion {
@@ -425,6 +447,11 @@ input::placeholder {
   }
   h1 {
     font-size: 4.5rem;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
   }
 }
 
