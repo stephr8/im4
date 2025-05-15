@@ -41,19 +41,7 @@ domnationality.value = data.user.nationality;
 domtrust_person.value = data.user.trust_person;
 domemail.value = data.user.email;
 // _______________________________________________________________
-// Adding Vorname und Nachname to the Database
-// _______________________________________________________________
-
-
-// const inputFirstName = document.querySelector('#inputFirstName');
-// const inputLastName = document.querySelector('#inputLastName');
-// const inputUsername = document.querySelector('#inputUsername');
-// const inputStreet = document.querySelector('#inputStreet');
-// const inputZip = document.querySelector('#inputZip');
-// const inputTown = document.querySelector('#inputTown');
-// const inputBirthdate = document.querySelector('#inputBirthdate');
-// const inputNationality = document.querySelector('#inputNationality');
-// const inputTrust_person = document.querySelector('#inputTrust_person');
+// Adding everything to the database
 
 
 saveButton.addEventListener('click', async () => {
