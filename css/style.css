@@ -174,12 +174,12 @@ input::placeholder {
   /* passt sich der container-Breite an */
 }
 
-.topbar-section {
+/* .topbar-section {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .back-button {
   justify-content: flex-start;
@@ -251,6 +251,8 @@ input::placeholder {
 }
 
 /* ------------------------------------------------------- */
+/* Accordion Styles */
+/* ------------------------------------------------------- */
 
 :root {
   --main-color: #0A1F44;
@@ -265,14 +267,13 @@ input::placeholder {
   border-radius: 12px;
   overflow: hidden;
   font-family: sans-serif;
-  padding: 4px;
+/*   padding: 4px; */
   margin: 0 auto;
  
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 1rem;
-  width: 100%;
   /* passt sich der container-Breite an */
   background-color: #FDFFFB;
   font-family: Inter, sans-serif;
@@ -280,38 +281,40 @@ input::placeholder {
 }
 
 .accordion-header {
-  background-color: var(--main-color);
-  color: white;
-  padding: 2rem;
+  background-color: #081A3D;
+  font-family: Inter, sans-serif;
+  color: #FDFFFB;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: rem;
   cursor: pointer;
   border-radius: 10px;
+  width: 100%;
 }
 
 .checkbox-circle {
-  width: 2rem;
-  height: 2rem;
+  justify-content: flex-start;
+  color: #FDFFFB;
+  curser: pointer;
+/*   width: 2rem;
+  height: 2rem; */
   border: 0.3rem solid white;
   border-radius: 50%;
-  justify-content: flex-start;
-  display: flex;
 }
 
 .accordion-title {
-  flex-grow: 1;
-  color: var(--primary_hg_dark, #E6EFFF);
-  align-content: center;
-  text-align: center;
+  color: #FDFFFB;
   font-family: Inter, sans-serif;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
   display: flex;
+  align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
 }
 
 .accordion-icon {
@@ -319,6 +322,8 @@ input::placeholder {
   transition: transform 0.3s ease;
   justify-content: flex-end;
   display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .accordion-body {
@@ -326,6 +331,7 @@ input::placeholder {
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 2rem;
+  width: 100%;
 }
 
 .accordion-footer {
@@ -334,6 +340,7 @@ input::placeholder {
   align-items: center;
   font-weight: bold;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .file-icon {
