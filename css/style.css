@@ -250,6 +250,11 @@ input::placeholder {
   background-color: #FDFFFB;
 }
 
+.check-task {
+  width: 2rem;
+  height: 2rem;
+}
+
 /* ------------------------------------------------------- */
 /* Accordion Styles */
 /* ------------------------------------------------------- */

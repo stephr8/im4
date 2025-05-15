@@ -2,6 +2,8 @@
 <?php
 require_once '../system/config.php';
 
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $taskId = $_POST['task_id'];
     $isChecked = $_POST['is_checked'];
@@ -21,4 +23,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn->close();
 }
+
 ?>
