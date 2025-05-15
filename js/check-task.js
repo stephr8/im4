@@ -1,44 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".check-task").forEach((checkbox) => {
-    checkbox.addEventListener("change", async function () {
-      const taskId = this.dataset.taskId;
-      const isChecked = this.checked;
+console.log('Loading task data...');
 
-      console.log("Checkbox geklickt");
-      console.log("Task ID:", taskId);
-      console.log("Checked:", isChecked);
+async function loadTaskData() {
+  const url = '/api/profile/readTask.php';
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+    return await response.json();
+  } catch (error) {
+    console.error('Fehler beim Laden der Aufgaben:', error);
+    return false;
+  }
+}
 
-      try {
-        const response = await fetch("api/update_task_check.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            task_id: taskId,
-            is_checked: isChecked ? 1 : 0,
-          }),
-        });
+async function init() {
+  const taskData = await loadTaskData();
+  console.log(taskData);
 
-        const result = await response.json();
+  if (taskData && taskData.status === "success") {
+    const taskId = taskData.user.task_id;
 
-        if (result.success) {
-          console.log("Daten erfolgreich gespeichert.");
-        } else {
-          console.warn("Fehler vom Server:", result.message || "Unbekannter Fehler");
-        }
-      } catch (error) {
-        console.error("Fehler beim Senden der Daten:", error);
-      }
-    });
-  });
-});
+    const domTaskId = document.querySelector('#task_id');
+    if (domTaskId) {
+      domTaskId.value = taskId;
+      // domTaskId.textContent = taskId;
+    }
+  } else {
+    console.warn('Keine Aufgaben gefunden oder Fehler beim Laden.');
+  }
+}
 
-document.querySelectorAll('.accordion-header').forEach(header => {
-  header.addEventListener('click', function (event) {
-    // Verhindere, dass Checkbox den Accordion-Toggle auslöst
-    if (event.target.tagName.toLowerCase() === 'input') return;
-
-    toggleAccordion(this);
-  });
-});
+init(); // Startpunkt
