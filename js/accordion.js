@@ -5,7 +5,8 @@
  function toggleAccordion(header) {
       const accordion = header.closest(".accordion");
       accordion.classList.toggle("open");
-  }
+  } 
+
     function toggleAccordion(header) {
     const accordion = header.parentElement;
     const body = accordion.querySelector('.accordion-body');
@@ -16,3 +17,11 @@
     body.style.display = isOpen ? 'none' : 'block';
     icon.src = isOpen ? 'images/chevronsmalldown.svg' : 'images/chevronsmallup.svg';
   }
+
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', function() {
+      toggleAccordion(this);
+    });
+  });
+
+  

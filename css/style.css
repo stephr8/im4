@@ -143,16 +143,16 @@ input::placeholder {
 }
 
 /* ------------------------------------------------------- */
+/* Container Topbar Styles */
+/* ------------------------------------------------------- */
 
 .container {
-  max-width: 45rem;
+  width: 90%;
   /* oder 100% für volle Breite, je nach Design */
   margin: 0 auto;
   /* zentriert horizontal */
   padding: 1rem;
 }
-
-
 
 .topbar {
   display: flex;
@@ -163,6 +163,7 @@ input::placeholder {
   /* passt sich der container-Breite an */
   background-color: #FDFFFB;
   font-family: Inter, sans-serif;
+  gap: 5rem;
 }
 
 .headerTitel {
@@ -262,6 +263,7 @@ input::placeholder {
 }
 
 .accordion {
+  width: 90%;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   font-family: sans-serif;
@@ -269,8 +271,7 @@ input::placeholder {
   justify-content: space-around;
   flex-direction: column;
   align-items: stretch;
-  margin-bottom: 1rem;
-  /* passt sich der container-Breite an */
+ 
   background-color: #FDFFFB;
   font-family: Inter, sans-serif;
   display: block;
@@ -360,7 +361,7 @@ input::placeholder {
 
 /* Klasse, die beim Öffnen gesetzt wird */
 .accordion.open .accordion-body {
-  max-height: auto; /* hoch genug für deinen Inhalt */
+  max-height: none; /* hoch genug für deinen Inhalt */
 }
 
 /* 
@@ -398,7 +399,7 @@ input::placeholder {
 /* Responsive Styles */
 /* ------------------------------------------------------- */
 
-@media (min-width: 380px) {
+@media (min-width: 390px) {
 
   .mainButton,
   .secondaryButton,
@@ -406,9 +407,8 @@ input::placeholder {
   .Untertitel,
   #logo {
     font-size: 1.2rem;
-    max-width: 20rem;
-  }
-  h1 {
+    }
+  .h1 {
     font-size: 3.5rem;
   }
 }
@@ -442,10 +442,6 @@ input::placeholder {
     font-size: 4.5rem;
   }
 
-  .accordion {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 @media (min-width: 1440px) {
