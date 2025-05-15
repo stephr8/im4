@@ -31,3 +31,23 @@ function toggleCheckbox(img) {
     console.error("Fehler:", error);
   });
 }
+
+document.querySelectorAll('.check-task').forEach(checkbox => {
+    checkbox.addEventListener('change', async function () {
+        const taskId = this.dataset.taskId;
+        const isChecked = this.checked ? 1 : 0;
+
+        const response = await fetch('api/update_task_check.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `task_id=${taskId}&is_checked=${isChecked}`
+        });
+
+        const result = await response.json();
+        if (!result.success) {
+            alert('Fehler beim Aktualisieren!');
+        }
+    });
+});
