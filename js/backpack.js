@@ -4,9 +4,8 @@
 
 // Function to send the request to create a new backpack
 async function createBackpack() {
-    const url = '/api/create_backpack.php';  // Correct the URL to your API
-    // Retrieve the user ID from a global variable, session storage, or API
-    const userId = sessionStorage.getItem('userId') || 123; // Replace 123 with a fallback or default value
+    const url = '/api/create_backpack.php';
+    const userId = sessionStorage.getItem('userId') || 123;
     const data = { user_id: userId };
 
     try {
@@ -15,16 +14,24 @@ async function createBackpack() {
             headers: {
                 'Content-Type': 'application/json'
             },
+            credentials: 'include',
             body: JSON.stringify(data)
         });
-        
+
+        console.log('Response status:', response.status);
+
         const result = await response.json();
+        console.log('Response body:', result);
         return result;
     } catch (error) {
-        console.error(error);
-        return false;
+        console.error('Fetch error:', error);
+        return {
+            success: false,
+            error: error.message || 'Netzwerkfehler'
+        };
     }
 }
+
 
 // Trigger the backpack creation when button is clicked
 const createBackpackButton = document.querySelector('#createBackpackBtn');
