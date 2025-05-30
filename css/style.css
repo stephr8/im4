@@ -497,3 +497,10 @@ input::placeholder {
 .center-text {
   text-align: center;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+}
