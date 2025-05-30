@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="images/Logo_vertikal.svg" />
+  <title>Gesundheit</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="topbar">
+      <button class="back-button" onclick="window.location.href='backpack.html'">
+        <img src="images/arrowleft.svg" alt="Back" />
+      </button>
+       <h3 class="headerTitel">Gesundheit</h3>
+      <button class="help-button" onclick="window.location.href='help.html'">
+        <img src="images/questioncircle.svg" alt="Help" />
+      </button></button>
+  </div>
+</div>
+
+  <div class="accordion">
+    
+     <div class="accordion-header">
+      <img src="images/uncheckedmark.svg" class="check-task" data-task-id="1" alt="Unchecked" />
+      <div class="accordion-title">Krankenkasse</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+
+    <div class="accordion-body" style="display: none;">
+      <p class="accordion-text">
+        Bei welcher Krankenkasse bist du versichert? Wo sind die Versichertenkarte und Unterlagen?
+      </p>
+
+      <div class="accordion-footer">
+        <span><h3 class="headerTitel">Dokumente hinzufügen</h3></span>
+        <img src="images/documentplus.svg" alt="Dokument hinzufügen" class="file-icon" />
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion">
+    
+     <div class="accordion-header">
+      <img src="images/uncheckedmark.svg" class="check-task" data-task-id="1" alt="Unchecked" />
+      <div class="accordion-title">Betreuungsvollmacht</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+
+    <div class="accordion-body" style="display: none;">
+      <p class="accordion-text">
+        Wer darf dich rechtlich vertreten? Gibt es eine schriftliche Vollmacht?
+      </p>
+
+      <div class="accordion-footer">
+        <span><h3 class="headerTitel">Dokumente hinzufügen</h3></span>
+        <img src="images/documentplus.svg" alt="Dokument hinzufügen" class="file-icon" />
+      </div>
+    </div>
+  </div>
+
+      <div class="accordion">
+    
+     <div class="accordion-header">
+      <img src="images/uncheckedmark.svg" class="check-task" data-task-id="1" alt="Unchecked" />
+      <div class="accordion-title">Patientenverfügung</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+
+    <div class="accordion-body" style="display: none;">
+      <p class="accordion-text">
+        Was sind deine medizinischen Wünsche im Ernstfall? Wo ist die Verfügung abgelegt?
+      </p>
+
+      <div class="accordion-footer">
+        <span><h3 class="headerTitel">Dokumente hinzufügen</h3></span>
+        <img src="images/documentplus.svg" alt="Dokument hinzufügen" class="file-icon" />
+      </div>
+    </div>
+  </div>
+
+  
+<!-- Only include the accordion.js file which now contains all necessary functionality -->
+<script src="js/accordion.js"></script>
+
+</body>
+
+</html>

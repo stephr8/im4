@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="images/Logo_vertikal.svg" />
+  <title>Gesundheit</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="topbar">
+      <button class="back-button" onclick="window.location.href='backpack.html'">
+        <img src="images/arrowleft.svg" alt="Back" />
+      </button>
+       <h3 class="headerTitel">Digitaler Nachlass</h3>
+      <button class="help-button" onclick="window.location.href='help.html'">
+        <img src="images/questioncircle.svg" alt="Help" />
+      </button></button>
+  </div>
+</div>
+
+  <div class="accordion">
+    
+     <div class="accordion-header">
+      <img src="images/uncheckedmark.svg" class="check-task" data-task-id="1" alt="Unchecked" />
+      <div class="accordion-title">E-Mail-Adressen</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+
+    <div class="accordion-body" style="display: none;">
+      <p class="accordion-text">
+       Welche E-Mail-Konten existieren? Wo sind die Login-Daten?
+      </p>
+
+      <div class="accordion-footer">
+        <span><h3 class="headerTitel">Dokumente hinzufügen</h3></span>
+        <img src="images/documentplus.svg" alt="Dokument hinzufügen" class="file-icon" />
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    
+     <div class="accordion-header">
+      <img src="images/uncheckedmark.svg" class="check-task" data-task-id="1" alt="Unchecked" />
+      <div class="accordion-title">Social Media Konten</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+
+    <div class="accordion-body" style="display: none;">
+      <p class="accordion-text">
+        Welche Profile bestehen (z. B. Facebook, Instagram)? Wer soll später Zugriff haben?
+      </p>
+
+      <div class="accordion-footer">
+        <span><h3 class="headerTitel">Dokumente hinzufügen</h3></span>
+        <img src="images/documentplus.svg" alt="Dokument hinzufügen" class="file-icon" />
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion">
+    
+     <div class="accordion-header">
+      <img src="images/uncheckedmark.svg" class="check-task" data-task-id="1" alt="Unchecked" />
+      <div class="accordion-title">Kundenkonten</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+
+    <div class="accordion-body" style="display: none;">
+      <p class="accordion-text">
+        Gibt es Online-Shops oder andere Kundenkonten? Wo sind die Logins gespeichert?
+      </p>
+
+      <div class="accordion-footer">
+        <span><h3 class="headerTitel">Dokumente hinzufügen</h3></span>
+        <img src="images/documentplus.svg" alt="Dokument hinzufügen" class="file-icon" />
+      </div>
+    </div>
+  </div>
+
+      <div class="accordion">
+    
+     <div class="accordion-header">
+      <img src="images/uncheckedmark.svg" class="check-task" data-task-id="1" alt="Unchecked" />
+      <div class="accordion-title">Weitere Logins</div>
+      <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
+    </div>
+
+    <div class="accordion-body" style="display: none;">
+      <p class="accordion-text">
+        Gibt es weitere digitale Zugänge (Cloud, Streaming, Banking etc.)? Wo sind sie dokumentiert?
+      </p>
+
+      <div class="accordion-footer">
+        <span><h3 class="headerTitel">Dokumente hinzufügen</h3></span>
+        <img src="images/documentplus.svg" alt="Dokument hinzufügen" class="file-icon" />
+      </div>
+    </div>
+  </div>
+
+  
+<!-- Only include the accordion.js file which now contains all necessary functionality -->
+<script src="js/accordion.js"></script>
+
+</body>
+
+</html>
