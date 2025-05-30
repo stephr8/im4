@@ -32,7 +32,7 @@ try {
             'backpack_id' => $result['backpack_id']
         ]);
     } else {
-        // If no backpack found, try to create one
+        // If no backpack found, create one with all tasks
         $pdo->beginTransaction();
 
         // Create new backpack
@@ -50,12 +50,29 @@ try {
             ':backpack_id' => $newBackpackId
         ]);
 
+        // Get all template tasks
+        $taskStmt = $pdo->query("SELECT id FROM task");
+        $taskIds = $taskStmt->fetchAll(PDO::FETCH_COLUMN);
+
+        // Create user_tasks entries
+        $insertTaskStmt = $pdo->prepare("
+            INSERT INTO user_tasks (backpack_id, task_id, isChecked)
+            VALUES (:backpack_id, :task_id, 0)
+        ");
+
+        foreach ($taskIds as $taskId) {
+            $insertTaskStmt->execute([
+                ':backpack_id' => $newBackpackId,
+                ':task_id' => $taskId
+            ]);
+        }
+
         $pdo->commit();
 
         echo json_encode([
             'success' => true,
             'backpack_id' => $newBackpackId,
-            'message' => 'New backpack created'
+            'message' => 'New backpack created with tasks'
         ]);
     }
 } catch (PDOException $e) {

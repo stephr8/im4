@@ -4,27 +4,23 @@
 
 // Function to send the request to create a new backpack
 async function createBackpack() {
-    const url = '/api/create_backpack.php';
-    const userId = sessionStorage.getItem('userId') || 123;
-    const data = { user_id: userId };
-
     try {
-        const response = await fetch(url, {
+        const response = await fetch('/api/create_backpack.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            credentials: 'include',
-            body: JSON.stringify(data)
+            credentials: 'include'
         });
 
-        console.log('Response status:', response.status);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
 
         const result = await response.json();
-        console.log('Response body:', result);
         return result;
     } catch (error) {
-        console.error('Fetch error:', error);
+        console.error('Error creating backpack:', error);
         return {
             success: false,
             error: error.message || 'Netzwerkfehler'
@@ -32,21 +28,32 @@ async function createBackpack() {
     }
 }
 
-
-// Trigger the backpack creation when button is clicked
-const createBackpackButton = document.querySelector('#createBackpackBtn');
-createBackpackButton.addEventListener('click', async () => {
-    const result = await createBackpack();
-
-    if (result && result.success) {
-        console.log('Backpack created with ID:', result.backpack_id);
-        window.location.href = 'backpack.html'; // ✅ redirect here
-    } else {
-        console.log('Error:', result.error || 'Unknown error');
-        alert(result.error || 'Fehler beim Erstellen des Backpacks');
+// Handle backpack creation when button is clicked
+document.addEventListener('DOMContentLoaded', () => {
+    const createBackpackBtn = document.querySelector('#createBackpackBtn');
+    if (createBackpackBtn) {
+        createBackpackBtn.addEventListener('click', async () => {
+            try {
+                const result = await createBackpack();
+                if (result.success) {
+                    // Redirect to backpack page on success
+                    window.location.href = 'backpack.html';
+                } else {
+                    // If backpack already exists, still redirect
+                    if (result.message === "Backpack already exists") {
+                        window.location.href = 'backpack.html';
+                    } else {
+                        // Show error for other issues
+                        alert(result.error || 'Fehler beim Erstellen des Rucksacks');
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Fehler beim Erstellen des Rucksacks');
+            }
+        });
     }
 });
-
 
 // _______________________________________________________________
 // Handling User Tasks and Checking the Response
