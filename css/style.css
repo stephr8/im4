@@ -281,7 +281,7 @@ input::placeholder {
   font-family: Inter, sans-serif;
   display: block;
   /* oder 100% für volle Breite, je nach Design */
-  margin: 0 auto;
+  margin: 0.5rem auto;
   /* zentriert horizontal */
   box-sizing: border-box;
 }
@@ -367,6 +367,10 @@ input::placeholder {
 /* Klasse, die beim Öffnen gesetzt wird */
 .accordion.open .accordion-body {
   max-height: none; /* hoch genug für deinen Inhalt */
+}
+
+.task-container{
+  gap: 2rem;
 }
 
 /* 
