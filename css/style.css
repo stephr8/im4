@@ -18,7 +18,7 @@ h1 {
 h2 {
   color: var(--primary_text_dark, #081A3D);
   font-family: Inter, sans-serif;
-  font-size: 3.1rem;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -163,15 +163,21 @@ input::placeholder {
   /* passt sich der container-Breite an */
   background-color: #FDFFFB;
   font-family: Inter, sans-serif;
-  gap: 5rem;
+  gap: 1rem;
 }
 
 .headerTitel {
-  font-size: 1.5rem;
+  font-size: 1rem;  /* Base size for mobile */
   color: #081A3D;
   font-weight: bold;
   width: 100%;
-  /* passt sich der container-Breite an */
+  margin: 0.5rem 0;
+}
+
+/* Add specific style for the backpack access text */
+.container > .headerTitel {
+  font-size: 1rem;
+  margin: 0.5rem 0;
 }
 
 /* .topbar-section {
@@ -409,7 +415,9 @@ input::placeholder {
 /* ------------------------------------------------------- */
 
 @media (min-width: 390px) {
-
+  .headerTitel {
+    font-size: 1.1rem;
+  }
   .mainButton,
   .secondaryButton,
   .input::placeholder,
@@ -423,7 +431,9 @@ input::placeholder {
 }
 
 @media (min-width: 768px) {
-
+  .headerTitel {
+    font-size: 1.2rem;
+  }
   .mainButton,
   .secondaryButton,
   .input::placeholder,
@@ -435,10 +445,16 @@ input::placeholder {
   h1 {
     font-size: 4rem;
   }
+
+  .container > .headerTitel {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 1024px) {
-
+  .headerTitel {
+    font-size: 1.3rem;
+  }
   .mainButton,
   .secondaryButton,
   .input::placeholder,
@@ -477,3 +493,7 @@ input::placeholder {
 
 /* 1024px+ */
 @media (min-width: 1024px) {}
+
+.center-text {
+  text-align: center;
+}
