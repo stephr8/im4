@@ -25,12 +25,12 @@
     </div>
 
   <div class="accordion">
-    <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="checkbox-circle"></div>
+    <div class="accordion-header">
+      <div style="width: 24px;"></div>
       <div class="accordion-title">Person</div>
       <img src="images/chevronsmalldown.svg" alt="Accordion öffnen" class="accordion-icon" />
     </div>
-    <div class="accordion-body">
+    <div class="accordion-body" style="display: none;">
       <form id="loginForm">
        <div>
         <input type="text" id="username" placeholder="Benutzername"/>
@@ -67,22 +67,10 @@
         </div>
         <button id="save_user_information" class="mainButton" type="submit">Speichern</button>
       </form> 
+    </div>
+  </div>
 
-
-
-  <script>
-    function toggleAccordion(header) {
-    const accordion = header.parentElement;
-    const body = accordion.querySelector('.accordion-body');
-    const icon = header.querySelector('.accordion-icon');
-
-    const isOpen = body.style.display === 'block';
-
-    body.style.display = isOpen ? 'none' : 'block';
-    icon.src = isOpen ? 'images/chevronsmalldown.svg' : 'images/chevronsmallup.svg';
-  }
-  </script>
-
+  <script src="js/accordion.js"></script>
   <script type="module" src="js/userInformation.js"></script>
 
 <!--     <script src="js/protected.js"></script> -->

@@ -16,10 +16,10 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const result = await response.json();
 
     if (result.status === "success") {
-      alert("Login successful!");
+      alert("Login erfolgreich!");
       window.location.href = "protected.html";
     } else {
-      alert(result.message || "Login failed.");
+      alert(result.message || "Login fehlgeschlagen.");
     }
   } catch (error) {
     console.error("Error:", error);

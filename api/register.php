@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $lastName   = trim($_POST['last_name'] ?? '');
 
     if (!$email || !$password || !$username || !$firstName || !$lastName) {
-        echo json_encode(["status" => "error", "message" => "All fields are required"]);
+        echo json_encode(["status" => "error", "message" => "Bitte fülle alle Felder aus"]);
         exit;
     }
 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare("SELECT id FROM users WHERE email = :email");
     $stmt->execute([':email' => $email]);
     if ($stmt->fetch()) {
-        echo json_encode(["status" => "error", "message" => "Email is already in use"]);
+        echo json_encode(["status" => "error", "message" => "Email ist bereits vergeben"]);
         exit;
     }
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare("SELECT id FROM user_profiles WHERE username = :username");
     $stmt->execute([':username' => $username]);
     if ($stmt->fetch()) {
-        echo json_encode(["status" => "error", "message" => "Username is already in use"]);
+        echo json_encode(["status" => "error", "message" => "Benutzername ist bereits vergeben"]);
         exit;
     }
 
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(["status" => "success"]);
     } catch (Exception $e) {
         $pdo->rollBack();
-        echo json_encode(["status" => "error", "message" => "Registration failed"]);
+        echo json_encode(["status" => "error", "message" => "Registration fehlgeschlagen"]);
     }
 } else {
     echo json_encode(["status" => "error", "message" => "Invalid request method"]);
