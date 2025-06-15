@@ -424,8 +424,9 @@ input::placeholder {
   h1 {
     font-size: 4.5rem;
   }
+  .mainButton,
   .secondaryButton {
-    max-width: 18rem;
+    width: 18rem;
 
   }
 
