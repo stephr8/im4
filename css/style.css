@@ -425,7 +425,8 @@ input::placeholder {
     font-size: 4.5rem;
   }
   .secondaryButton {
-    width: 18rem;
+    max-width: 18rem;
+
   }
 
 }
